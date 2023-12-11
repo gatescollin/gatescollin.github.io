@@ -1,6 +1,7 @@
 ---
 title: "Collin Gates"
 author: "Collin Gates"
+show_author: false
 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
