@@ -9,33 +9,32 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
-    - icon: instagram
-      text: Instagram
-      href: https://instagram.com
+      href: https://www.linkedin.com/in/collin-gates-28a6b71a6
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://github.com/gatescollin
     - icon: file-earmark-pdf
       text: Resumé
-      href: https://GITHUB_USERNAME.github.io/resume-example.pdf
+      href: https://gatescollin.github.io/Resume.pdf.pdf
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:cg21@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+My name is Collin Gates and I am Majoring in Business. I am learing about Data Analytics. In my free time I like to research and invest in cryptocurrencies and find using and learning about new AI technology interesting. I don't use many social media applications, however, I do utilize twitter, telegram, and discord a lot throughout the day to keep up to date with all things crypto.
 
 ## Education
 
 State University of New York at Geneseo | Geneseo, NY <br>
-B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Business Administration 
+Associates in Business | Aug 2020 - May 2022 <br>
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+Dunkin Assistant Manager | Life Insurance Agent | May 2018 - Aug 2020
+
+
+
 
 
