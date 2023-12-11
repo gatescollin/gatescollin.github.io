@@ -1,9 +1,9 @@
 ---
-title: "Beer Markets"
-author: "Byeong-Hak Choe"
-date: "2023-11-02"
-categories: [beer, code, data-analysis]
-image: "image.png"
+title: "Restaurant Inspections"
+author: "Collin Gates"
+date: "2023-11-12"
+categories: [restaurants, code, data-analysis]
+image: "Restaurant.jpg"
 
 execute: 
   warning: false
@@ -33,10 +33,10 @@ theme_set(theme_ipsum()+
           )
 ```
 
-Let's analyze the `beer_data` data:
+Let's analyze the `Restaurant_Inspection` data:
 
 ```{r}
-beer_data <- read_csv("https://bcdanl.github.io/data/beer_markets.csv")
+Restaurant_Inspection <- read_csv("https://bcdanl.github.io/data/DOHMH_NYC_Restaurant_Inspection.csv")
 ```
 
 
