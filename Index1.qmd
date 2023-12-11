@@ -22,12 +22,10 @@ My name is Collin Gates and I am Majoring in Business. I am learing about Data A
 
 ## Education
 
-University of California, San Diego | San Diego, CA
-PhD in Mathematics | Sept 2011 - June 2015
+University of California, San Diego \| San Diego, CA PhD in Mathematics \| Sept 2011 - June 2015
 
-Macalester College | St. Paul MA
-B.A in Economics | Sept 2007 - June 2011
+Macalester College \| St. Paul MA B.A in Economics \| Sept 2007 - June 2011
 
 ## Experience
 
-Dunkin Assistant Manager | Life Insurance Agent | May 2018 - Aug 2020
+Dunkin Assistant Manager \| Life Insurance Agent \| May 2018 - Aug 2020
