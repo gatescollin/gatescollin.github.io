@@ -3,7 +3,7 @@
     "path": "~/Data Analytics/project/index.qmd",
     "project_path": null,
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2516937554",
     "contents": "",
     "dirty": false,
     "created": 1702317988782.0,
@@ -19,11 +19,11 @@
         "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1702318842,
+    "lastKnownWriteTime": 1702319688,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1702318842960,
+    "last_content_update": 1702319688510,
     "read_only": false,
     "read_only_alternatives": []
 }
