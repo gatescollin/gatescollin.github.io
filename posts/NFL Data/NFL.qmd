@@ -116,7 +116,7 @@ Variable description for NFL2022_epa
 - receiver: Name of the receiver.
 
 - epa: Expected points added (EPA) by the posteam for the given play.
----
+
 Create the data.frame, NFL2022_stuffs_EPA, that includes
 
 All the variables in the data.frame, NFL2022_stuffs;
@@ -134,7 +134,6 @@ head(NFL2022_stuffs_EPA)
 Provide both (1) a single ggplot and (2) a simple comment to describe the NFL weekly trend of weekly mean value of epa for each of the following two passers,
 1. "J.Allen"
 2. "P.Mahomes"
-## Q2e. NFL Weekly Trend Analysis
 
 Below is the trend of the weekly mean value of Expected Points Added (EPA) for passers J.Allen and P.Mahomes.
 
