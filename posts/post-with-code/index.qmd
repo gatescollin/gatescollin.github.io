@@ -3,7 +3,7 @@ title: "Beer Markets"
 author: "Collin Gates"
 date: "2023-12-11"
 categories: [beer, code, analysis]
-image: "image.jpg"
+image: "beer.jpg"
 
 execute: 
   warning: false
