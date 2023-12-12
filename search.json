@@ -4,7 +4,7 @@
     "href": "blog-listing.html",
     "title": "Collins Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nSpotify\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nRestaurant Inspections\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\nNov 12, 2023\n\n\nCollin Gates\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\n\nOct 30, 2023\n\n\nYOUR NAME\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nSpotify\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nRestaurant Inspections\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nBeer Markets\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\nNov 12, 2023\n\n\nCollin Gates\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Index.html",
@@ -72,9 +72,9 @@
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "title": "Beer Markets",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "Let’s analyze the beer_market data:\n\nbeer_mkts &lt;- read_csv('https://bcdanl.github.io/data/beer_markets.csv')\n\n\nrmarkdown::paged_table(beer_mkts)"
   },
   {
     "objectID": "posts/starwars/starwars_df.html",
