@@ -1,7 +1,7 @@
 ---
 title: "Restaurant Inspections"
 author: "Collin Gates"
-date: "2023-11-12"
+date: "2023-12-12"
 categories: [restaurants, code, data-analysis]
 image: "Restaurant.jpg"
 
@@ -45,27 +45,29 @@ Restaurant_Inspection <- read_csv("https://bcdanl.github.io/data/DOHMH_NYC_Resta
 rmarkdown::paged_table(Restaurant_Inspection) 
 ```
 
-##How does the distribution of score vary by Grade and Critical Flag?
+How does the distribution of score vary by Grade and Critical Flag?
 
 #1
+```{r}
+#| echo: false
+ggplot(Restaurant_Inspection, aes(x = SCORE, y = GRADE, fill = GRADE)) +
+  geom_boxplot() +
+  facet_grid(`CRITICAL FLAG` ~ .)
 
-ggplot(restaurant) +
-  geom_boxplot(aes(x = SCORE, y = GRADE, fill = GRADE) ) +
-  facet_grid( `CRITICAL FLAG` ~ . )
-
+```
 #2
+```{r}
+#| echo: false
+ggplot(Restaurant_Inspection, aes(x = SCORE)) +
+  geom_histogram(binwidth = 1) +
+  facet_grid(`CRITICAL FLAG` ~ GRADE)
 
-ggplot(restaurant) +
-  geom_histogram(aes(x = SCORE), binwidth = 1 ) +
-  facet_grid( `CRITICAL FLAG` ~ GRADE )
-  
+```
 #3
+```{r}
+#| echo: false
+ggplot(Restaurant_Inspection, aes(x = SCORE)) +
+  geom_histogram(binwidth = 1) +
+  facet_grid(`CRITICAL FLAG` ~ GRADE, scales = 'free_x')
 
-ggplot(restaurant) +
-  geom_histogram(aes(x = SCORE), binwidth = 1 ) +
-  facet_grid( `CRITICAL FLAG` ~ GRADE, scales = 'free_x' )
-
-
-
-
-
+```

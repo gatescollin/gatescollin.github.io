@@ -1,9 +1,9 @@
 ---
-title: "Starwars"
-author: "Your Name"
-date: "2023-10-30"
-categories: [starwars, code, analysis]
-image: "image.png"
+title: "Spotify"
+author: "Collin Gates"
+date: "2023-12-12"
+categories: [spotify, code, analysis]
+image: "spotify.png"
 
 execute: 
   warning: false
@@ -20,6 +20,7 @@ library(tidyverse)
 library(skimr)
 library(ggthemes)
 library(hrbrthemes)
+library(ggplot2)
 
 theme_set(theme_ipsum()+
           theme(strip.background =element_rect(fill="lightgray"),
@@ -33,66 +34,79 @@ theme_set(theme_ipsum()+
           )
 ```
 
-Let's analyze the `starwars` data:
+Let's analyze the `spotify` data:
 
 ```{r}
-starwars <- read_csv("https://bcdanl.github.io/data/starwars.csv")
+spotify_all <- read_csv('https://bcdanl.github.io/data/spotify_all.csv')
 ```
 
 
 ```{r}
 #| results: asis
-rmarkdown::paged_table(starwars) 
+rmarkdown::paged_table(spotify_all) 
 ```
 
 
 
-## Variable Description for `starwars` data.frame
+## Variable Description for `spotify_all` data.frame
 
-The following describes the variables in the `starwars` data.frame.
+Variable Description
 
+-pid: playlist ID; unique ID for playlist
 
-- `films`
-List of films the character appeared in
+-playlist_name: a name of playlist
 
-- `name`
-Name of the character
+-pos: a position of the track within a playlist (starting from 0)
 
-- `species`
-Name of species
+-artist_name: name of the track’s primary artist
 
-- `height`
-Height (cm)
+-track_name: name of the track
 
-- `mass`
-Weight (kg)
+-duration_ms: duration of the track in milliseconds
 
-- `hair_color`, `skin_color`, `eye_color`
-Hair, skin, and eye colors
+-album_name: name of the track’s album
 
-- `birth_year`
-Year born (BBY = Before Battle of Yavin)
+---
+The relationship between pos and the ten most popular artists.
 
-- `sex`
-The biological sex of the character, namely male, female, hermaphroditic, or none (as in the case for Droids).
-
-- `gender`
-The gender role or gender identity of the character as determined by their personality or the way they were programmed (as in the case for Droids).
-
-- `homeworld`
-Name of homeworld
-
-
-## Human vs. Droid
+#1
 
 ```{r}
-ggplot(data = 
-         starwars %>% 
-         filter(species %in% c("Human", "Droid"))) +
-  geom_boxplot(aes(x = species, y = mass, 
-                   fill = species),
-               show.legend = FALSE)
-
+#| echo: false
+Q1c <- spotify_all %>% 
+  group_by(artist_name) %>% 
+  mutate(n_popular_artist = n()) %>% 
+  ungroup() %>% 
+  mutate( artist_ranking = dense_rank( desc(n_popular_artist) ) ) %>% 
+  filter( artist_ranking <= 10) 
+  
+# boxplot
+ggplot(Q1c,
+       aes(x = pos, y = fct_reorder(artist_name, -artist_ranking)) ) +
+  geom_boxplot() +
+  stat_summary(
+    fun = mean,
+    color = 'red'
+  )
 ```
 
+#2
+```{r}
+#| echo: false
+ggplot(Q1c) +
+  geom_histogram(aes(x = pos), binwidth = 1) + 
+  facet_grid(fct_reorder(artist_name, artist_ranking) ~ .  , switch = "y") +
+  theme(strip.text.y.left = element_text(angle = 0))
+```
 
+#3
+```{r}
+#| echo: false
+ggplot(Q1c, aes(x = artist_name, y = pos)) +
+  geom_boxplot() +
+  labs(title = "Position of Tracks by Top Ten Artists",
+       x = "Artist",
+       y = "Position in Playlist") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x labels for readability
+```

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Collin Gates">
-<meta name="dcterms.date" content="2023-11-12">
+<meta name="dcterms.date" content="2023-12-12">
 
 <title>Collin Gates - Restaurant Inspections</title>
 <style>
@@ -162,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 12, 2023</p>
+        <p class="date">December 12, 2023</p>
       </div>
     </div>
     
@@ -195,13 +195,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 </div>
 </div>
-<p>##How does the distribution of score vary by Grade and Critical Flag?</p>
+<p>How does the distribution of score vary by Grade and Critical Flag?</p>
 <p>#1</p>
-<p>ggplot(restaurant) + geom_boxplot(aes(x = SCORE, y = GRADE, fill = GRADE) ) + facet_grid( <code>CRITICAL FLAG</code> ~ . )</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="beer-markets_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p>#2</p>
-<p>ggplot(restaurant) + geom_histogram(aes(x = SCORE), binwidth = 1 ) + facet_grid( <code>CRITICAL FLAG</code> ~ GRADE )</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="beer-markets_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p>#3</p>
-<p>ggplot(restaurant) + geom_histogram(aes(x = SCORE), binwidth = 1 ) + facet_grid( <code>CRITICAL FLAG</code> ~ GRADE, scales = ‘free_x’ )</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="beer-markets_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 
