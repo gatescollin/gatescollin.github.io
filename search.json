@@ -4,7 +4,7 @@
     "href": "blog-listing.html",
     "title": "Collins Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nRestaurant Inspections\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nBeer Markets\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nSpotify\n\n\n\n\n\n\n\n\n\nDec 10, 2023\n\n\nCollin Gates\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nBeer Markets\n\n\n\n\n\n\n\n\n\nDec 13, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nCollin Gates\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nRestaurant Inspections\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nBeer Markets\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\nCollin Gates\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nSpotify\n\n\n\n\n\n\n\n\n\nDec 10, 2023\n\n\nCollin Gates\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Index.html",
@@ -138,5 +138,26 @@
     "title": "Spotify",
     "section": "Variable Description for spotify_all data.frame",
     "text": "Variable Description for spotify_all data.frame\nVariable Description\n-pid: playlist ID; unique ID for playlist\n-playlist_name: a name of playlist\n-pos: a position of the track within a playlist (starting from 0)\n-artist_name: name of the track’s primary artist\n-track_name: name of the track\n-duration_ms: duration of the track in milliseconds\n-album_name: name of the track’s album\n\nThe relationship between pos and the ten most popular artists.\n#1\n\n\n\n\n\n#2 ::: {.cell} ::: {.cell-output-display}  ::: :::\n#3 ::: {.cell} ::: {.cell-output-display}  ::: :::"
+  },
+  {
+    "objectID": "posts/welcome/Welcome.html",
+    "href": "posts/welcome/Welcome.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!"
+  },
+  {
+    "objectID": "posts/post-with-code/beer.html",
+    "href": "posts/post-with-code/beer.html",
+    "title": "Beer Markets",
+    "section": "",
+    "text": "Let’s analyze the beer_market data:\n\nbeer_mkts &lt;- read_csv('https://bcdanl.github.io/data/beer_markets.csv')\n\n\nrmarkdown::paged_table(beer_mkts)"
+  },
+  {
+    "objectID": "posts/NFL Data/NFL.html",
+    "href": "posts/NFL Data/NFL.html",
+    "title": "Beer Markets",
+    "section": "",
+    "text": "Let’s analyze the beer_market data:\n\nbeer_mkts &lt;- read_csv('https://bcdanl.github.io/data/beer_markets.csv')\n\n\nrmarkdown::paged_table(beer_mkts)"
   }
 ]
