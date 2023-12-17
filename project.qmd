@@ -1,12 +1,12 @@
 ---
 title: DANL Project
-subtitle: "Data-Driven Mastery: Unlocking Business Potential"
+subtitle: "Analyzing Trends in Athlete Salaries Across Countries and Sports"
 author: 
-  - Name 1
-  - Name 2
-  - Name 3
-  - Name 4
-  - Name 5
+  - Name Collin Gates
+  - Name Abby Dunnigan
+  - Name Meghan Catania
+  - Name Teddy Packert
+  - Name Emily Peters
 
 toc: true
 toc-title: "Table of Contents"
@@ -28,6 +28,7 @@ library(tidyverse)
 library(skimr)
 library(ggthemes)
 library(hrbrthemes)
+library(readxl)
 
 theme_set(theme_ipsum()+
           theme(strip.background =element_rect(fill="lightgray"),
@@ -49,26 +50,24 @@ theme_set(theme_ipsum()+
 
 About this project :clap:
 
-```{r}
-1 + 1
-```
-
+This project explores the evolution of athlete salaries across different sports and countries over time. We analyze trends, make comparisons, and identify factors influencing these changes
 
 # Data
 
-The data.frame `mpg` contains a subset of the fuel economy data that the EPA makes available on [https://fueleconomy.gov/](https://fueleconomy.gov/). It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. :oncoming_automobile:
+We utilize a comprehensive dataset of athlete salaries from various sports and countries, spanning multiple years. The dataset includes information such as the year, country, sport, and the corresponding salaries:
 
 
 ## Summary Statistics
 
 ```{r}
-mpg <- ggplot2::mpg
+athlete_salaries <- read_excel("C:/Users/collin/Documents/Data Analytics/project/Most_paid_athletes.xlsx")
+
 ```
 
 ```{r}
 #| results: asis
 #| echo: false
-rmarkdown::paged_table(mpg) 
+rmarkdown::paged_table(athlete_salaries) 
 ```
 
 
