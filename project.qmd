@@ -2,11 +2,11 @@
 title: DANL Project
 subtitle: "Analyzing Trends in Athlete Salaries Across Countries and Sports"
 author: 
-  - Name Collin Gates
-  - Name Abby Dunnigan
-  - Name Meghan Catania
-  - Name Teddy Packert
-  - Name Emily Peters
+  - Collin Gates
+  - Abby Dunnigan
+  - Meghan Catania
+  - Teddy Packert
+  - Emily Peters
 
 toc: true
 toc-title: "Table of Contents"
@@ -48,7 +48,7 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
-About this project :clap:
+About this project :chart_with_upwards_trend:
 
 This project explores the evolution of athlete salaries across different sports and countries over time. We analyze trends, make comparisons, and identify factors influencing these changes
 
@@ -72,20 +72,56 @@ rmarkdown::paged_table(athlete_salaries)
 
 
 ```{r}
-skim(mpg) %>% 
+skim(athlete_salaries) %>% 
   select(-n_missing)
 ```
 
 
-## MPG and a Type of Cars
-The following boxplot shows how the distribution of highway MPG (`hwy`) varies by a type of cars (`class`) :blue_car: :truck: :minibus:.
-
+# Plots
+## Mean Earnings Over Time
 
 ```{r}
-ggplot(data = mpg) +
-  geom_boxplot(aes(x = class, y = hwy, fill = class),
-               show.legend = F) +
-  labs(x = "Class", y = "Highway\nMPG") 
+mean_earnings_by_year <- athlete_salaries %>%
+  group_by(Year) %>%
+  summarise(MeanEarnings = mean(`earnings ($ million)`, na.rm = TRUE))
+
+ggplot(mean_earnings_by_year, aes(x = Year, y = MeanEarnings)) +
+  geom_line() +
+  labs(title = "Time Series of Mean Athlete Earnings by Year", x = "Year", y = "Mean Earnings ($ million)") +
+  theme_minimal()
+ 
 ```
+
+The time series chart tracks the average earnings of athletes over a span of years, displaying an overall increasing trend with some years experiencing significant peaks and troughs. The peaks may correspond to years with major events, lucrative endorsements, or new television deals that have boosted earnings. However, the graph also shows sharp declines following the peaks, which could be due to economic downturns, strikes, or other industry-wide factors that affect athletes' incomes.
+
+## Earnings Distribution by Nationality
+
+```{r}
+ggplot(athlete_salaries, aes(x = Nationality, y = `earnings ($ million)`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Athlete Earnings by Nationality", x = "Nationality", y = "Earnings ($ million)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+```
+
+This chart shows the distribution of athlete earnings across different nationalities. There is a notable variance in earnings among athletes from the same country, with countries like the USA showing a particularly wide range, indicating the presence of both high-earning superstars and lower-earning professional athletes. The dispersion of data points for each nationality also suggests that there are different scales of financial success within the sports industries of different nations.
+
+# Trend Analysis
+Analysing how athlete earnings have evolved over the years gives us insight into the economic aspects of sports.
+
+## Mean Earnings Over Time
+```{r}
+ranked_earnings_by_sport_over_time <- athlete_salaries %>%
+  group_by(Sport, Year) %>%
+  summarise(MeanEarnings = mean(`earnings ($ million)`, na.rm = TRUE)) %>%
+  arrange(Sport, desc(Year))
+
+ranked_earnings_by_sport_over_time
+```
+
+Athlete salaries have trended upwards since 2006, despite year-to-year variations, highlighting the sports industry's growing profitability. There was a top in 2019 as the following year went down, proving the volatility in the industry.
+
 
 
